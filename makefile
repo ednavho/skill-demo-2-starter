@@ -7,7 +7,7 @@ LinkedListTest.class: LinkedListTest.java LinkedList.class
 LinkedList.class: LinkedList.java
 	javac -g -cp $(CLASSPATH) LinkedList.java
 
-debug-test:
+debug-test: LinkedListTest.class
 	jdb -classpath "lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:lib/commonmark-0.18.1.jar:." org.junit.runner.JUnitCore LinkedListTest
 
 test: LinkedListTest.class
